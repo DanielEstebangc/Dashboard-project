@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 👇 Define la fuente global sin usar @layer */
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+
+/* 👇 Aplica el color global a todos los íconos */
+.material-symbols-outlined {
+  color: rgb(75 85 99); /* equivalente a text-gray-600 en Tailwind */
+}
+
+/* 👇 Ajuste de html y body */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+

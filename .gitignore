@@ -1,0 +1,48 @@
+# ===================================
+# 🌐 PROYECTO DASHBOARD FULLSTACK
+# Ignorar archivos innecesarios de frontend y backend
+# ===================================
+
+# 🧾 Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 📦 Node modules y builds
+node_modules/
+dist/
+build/
+.cache/
+
+# 🔒 Archivos de entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# 🧠 Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# 🧰 Archivos de editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ☁️ Plataformas de despliegue
+*.vercel
+*.netlify
+
+# 🚫 Archivos específicos de dependencias o caché
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
