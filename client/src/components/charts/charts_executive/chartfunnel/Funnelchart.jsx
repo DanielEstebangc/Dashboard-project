@@ -35,8 +35,8 @@ const CustomTooltip = ({ active, payload }) => {
 
 const CustomFunnelChart = () => {
   return (
-    <div className="flex flex-col justify-center items-centerblock box-border w-[373.406px] h-[300px] min-w-0 text-[oklch(0.145_0_0)] text-[14px] leading-[21px] text-left font-sans font-normal m-0 p-0 border-[rgba(0,0,0,0.1)] border-t-0 border-r-0 border-b-0 border-l-0 outline-[oklab(0.708_0_0_/_0.5)] [tab-size:4] [unicode-bidi:isolate] [text-size-adjust:100%] [border-image:unset] [border-image-outset:0] [border-image-repeat:stretch] [border-image-slice:100%] [border-image-width:1] [--tw-border-opacity:1]">
-      <div className="flex flex-col justify-center items-centerw-[330px] h-[300px] p-4">
+    <div className="chart-no-outline flex flex-col justify-center items-centerblock box-border w-[373.406px] h-[300px] min-w-0 text-[oklch(0.145_0_0)] text-[14px] leading-[21px] text-left font-sans font-normal m-0 p-0 border-[rgba(133, 60, 60, 0.8)] border-t-0 border-r-0 border-b-0 border-l-0 outline-[oklab(0.708_0_0_/_0.5)] [tab-size:4] [unicode-bidi:isolate] [text-size-adjust:100%] [border-image:unset] [border-image-outset:0] [border-image-repeat:stretch] [border-image-slice:100%] [border-image-width:1] [--tw-border-opacity:1]">
+      <div className="chart-no-outline flex flex-col justify-center items-centerw-[330px] h-[300px] p-4">
         <ResponsiveContainer width="100%" height="100%">
           <FunnelChart>
             {/* 👇 Aquí usamos el tooltip personalizado */}

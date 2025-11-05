@@ -51,7 +51,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 export default function BarChartGap() {
   return (
     // Este div es el contenedor del gráfico y debe ocupar todo el espacio disponible
-    <div className="w-full h-full">
+    <div className="chart-no-outline w-full h-full">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}

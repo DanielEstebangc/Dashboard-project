@@ -21,7 +21,7 @@ const CustomTooltip = ({ active, payload }) => {
     const formattedValue = `$${value.toLocaleString("en-US")}`;
 
     return (
-        <div className="bg-white border border-gray-300 px-3 py-2 rounded-lg shadow-md text-sm flex justify-between items-center gap-2">
+        <div className="chart-no-outline bg-white border border-gray-300 px-3 py-2 rounded-lg shadow-md text-sm flex justify-between items-center gap-2">
             <p className="m-0 text-gray-700 font-medium">{name}</p>
             <p className="m-0 text-gray-600">{formattedValue}</p>
         </div>
@@ -33,7 +33,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 export default function MixvsDigitalChart() {
   return (
-    <div style={{ width: 200, height: 200, marginRight: 28}}>
+    <div   className="chart-no-outline" style={{ width: 200, height: 200, marginRight: 28}}>
       <ResponsiveContainer>
         <PieChart>
           <Pie

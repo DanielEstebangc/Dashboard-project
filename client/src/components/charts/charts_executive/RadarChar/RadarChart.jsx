@@ -39,7 +39,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 export default function RadarChartGap() {
   return (
-    <div className="w-full h-full"> {/* Contenedor padre con altura definida */}
+    <div className="chart-no-outline w-full h-full"> {/* Contenedor padre con altura definida */}
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="87%" data={data}>
           <PolarGrid stroke="#ccc" />

@@ -21,4 +21,9 @@ html, body {
   padding: 0;
 }
 
+.chart-no-outline *:focus {
+  outline: none !important;
+  border: none !important;
+}
+
 

@@ -25,14 +25,14 @@ export default function Executive_Cockpit() {
     
   </div>
 
-  <div className="bg-white grid box-border text-[oklch(0.145_0_0)] font-sans text-[14px] leading-[21px] text-left gap-x-[21px] gap-y-[21px] m-0 mb-[21px] w-full max-w-[900px] border-[0px] border-solid border-[rgba(0,0,0,0.1)] outline-[oklab(0.708_0_0_/_0.5)] grid-cols-12 [--webkit-tap-highlight-color:rgba(0,0,0,0)]">
-    <div className="col-span-5 flex flex-col items-center justify-start box-border text-[oklch(0.145_0_0)] font-sans text-[14px] leading-[21px] text-left w-full h-auto border-[0px] border-solid border-[rgba(0,0,0,0.1)] outline-[oklab(0.708_0_0_/_0.5)] [--webkit-tap-highlight-color:rgba(0,0,0,0)]">
+  <div className="bg-white grid box-border text-[oklch(0.145_0_0)] font-sans text-[14px] leading-[21px] text-left gap-x-[21px] gap-y-[21px] m-0 mb-[21px] w-full max-w-[900px] border-[0px] grid box-border outline-[oklab(0.708_0_0_/_0.5)] grid-cols-12 ">
+    <div className="col-span-5 flex flex-col items-center justify-start box-border text-[oklch(0.145_0_0)] font-sans text-[14px] leading-[21px] text-left w-full h-auto border-[0px] border-solid  outline-[oklab(0.708_0_0_/_0.5)] ">
       {/* seccion 1 */}
-      <div className="bg-white shadow-[0_0_4px_rgba(0,0,0,0.1)] flex flex-col justify-center items-center hover:border-[rgb(158,45,56)] w-[377.188px] h-auto bg-white rounded-[8px] border-2 border-transparent shadow-sm text-[14px] text-[oklch(0.145_0_0)] font-sans leading-[21px] p-0 m-0 mb-[21px] gap-[21px] outline-[oklab(0.708_0_0_/_0.5)] transition-all duration-200 ease-in-out [box-sizing:border-box] [unicode-bidi:isolate] [-webkit-tap-highlight-color:rgba(0,0,0,0)]">
-        <div className="shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white border-[rgba(0,0,0,0.1)] block w-full h-auto m-0 p-0 outline-[oklab(0.708_0_0_/_0.5)]">
+      <div className="overflow-hidden bg-white shadow-[0_0_4px_rgba(0,0,0,0.1)] flex flex-col justify-center items-center hover:border-[rgb(158,45,56)] w-[377.188px] h-auto bg-white rounded-[8px] border-2 border-transparent shadow-sm text-[14px] text-[oklch(0.145_0_0)] font-sans leading-[21px] p-0 m-0 mb-[21px] gap-[21px] outline-[oklab(0.708_0_0_/_0.5)] transition-all duration-200 ease-in-out [box-sizing:border-box] [unicode-bidi:isolate]">
+        <div className="shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white border-[rgba(112, 103, 103, 0.8)] block w-full h-auto m-0 p-0 outline-[oklab(0.708_0_0_/_0.5)]">
             <FunnelTitulo/>
-            <div className="bg-white flex flex-col justify-center items-center w-full h-auto px-[21px] py-[21px] border-[rgba(0,0,0,0.1)]">
-                <div className="flex flex-col justify-center items-center w-full h-auto border-[rgba(0,0,0,0.1)]">
+            <div className="bg-white flex flex-col justify-center items-center w-full h-auto px-[21px] py-[21px] border-[rgba(112, 103, 103, 0.8)]">
+                <div className="flex flex-col justify-center items-center w-full h-auto border-[rgba(112, 103, 103, 0.8)]">
                   <FunnelChart/>
                 </div>
                 <div className=" bg-white grid grid-cols-3 gap-[14px] w-full h-auto mt-[14px] text-[14px] leading-[21px] text-left text-[oklch(0.145_0_0)] font-sans border-0 p-0 m-0">
