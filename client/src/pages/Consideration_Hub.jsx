@@ -1,12 +1,14 @@
+import SecciondeAnalisis from "../components/pages/SecciondeAnalisis"
 export default function Consideration_Hub() {
+
+  const datosAnalisis = [
+    { titulodatos: "CTR Promedio", data: "2.34%", comparacion: "+0.8pp vs target" },
+    { titulodatos: "CPC Promedio", data: "$1,180", comparacion: "-12.3% vs target" },
+    { titulodatos: "Sessions", data: "84,562", comparacion: "+15.2% vs target" },
+    { titulodatos: "Bounce Rate", data: "32.1%", comparacion: "+3.2pp vs target"},
+  ];
+
   return (
-    <section className="p-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl shadow-lg text-white">
-      <h1 className="text-2xl font-bold drop-shadow-md">
-            Consideration_Hub     
-     </h1>
-      <p className="text-sm text-indigo-100/80 mb-4">
-        Resumen general de métricas y desempeño.
-      </p>
-    </section>
+      <SecciondeAnalisis icono="Group" titulo="Consideration Hub" subtitulo="Análisis del micro-funnel: Impressions → Clicks → Sessions" datos={datosAnalisis} proximamente="Próximamente: Cascada Impressions→Clicks→Sessions, Top Landing Pages, Radar Audiencias" textoclass="text-gray-500" style="w-[200px] h-[82px]"/>
   )
 }

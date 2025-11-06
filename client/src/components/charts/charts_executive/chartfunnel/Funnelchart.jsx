@@ -11,8 +11,8 @@ import {
 
 const data = [
   { name: "Gasto Awareness", value: 277590326, fill: "#9E2D38",link:"/awareness-performance" },
-  { name: "Consideration", value: 277979326, fill: "#666666" },
-  { name: "Purchase", value: 277306326, fill: "#2B5A7A" },
+  { name: "Consideration", value: 277979326, fill: "#666666",link:"/consideration-hub" },
+  { name: "Purchase", value: 277306326, fill: "#2B5A7A",link:"/purchase-leads" },
 ];
 
 // Tooltip personalizado

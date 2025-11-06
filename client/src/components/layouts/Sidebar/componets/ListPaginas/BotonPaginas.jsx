@@ -1,7 +1,6 @@
-export default function BotonPagina ({icon,children, isActive, onClick}) {
+export default function BotonPagina ({icon,children, isActive}) {
     return (        
        <button 
-        onClick={onClick}
         className={`   
        flex items-center box-border text-[14px] leading-[21px] font-sans font-normal h-[31.5px] w-[237px] rounded-[8.75px] border-0 text-left p-[7px_10.5px] m-0 mb-[3.5px] opacity-100 transition-colors duration-[150ms] ease-[cubic-bezier(0.4,0,0.2,1)]
         ${isActive

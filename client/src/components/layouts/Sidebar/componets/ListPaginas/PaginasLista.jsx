@@ -1,6 +1,8 @@
 import { useState } from "react";
 import BotonPagina from "./BotonPaginas";
 import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+
 
 export default function PaginasLista () {
     const [active, setActive] = useState("Executive Cockpit");
@@ -14,59 +16,78 @@ export default function PaginasLista () {
 
             <div className="box-border text-[oklch(0.145_0_0)] block font-sans text-[14px] leading-[21px] h-[206.5px] w-[237px] border-t-0 border-b-0 border-l-0 border-r-0 text-left p-0 m-0">
 
-            <Link to="/executive" style={{ textDecoration: 'none' }}>
-                <BotonPagina
-                icon="finance"
-                isActive={active === "Executive Cockpit"}
-                onClick={() => setActive("Executive Cockpit")}
-                >Executive Cockpit</BotonPagina>
-            </Link>
+           <NavLink
+                to="/executive"
+                style={{ textDecoration: "none" }}
+                >
+                {({ isActive }) => (
+                    <BotonPagina
+                    icon="finance"
+                    isActive={isActive}
+                    >
+                    Executive Cockpit
+                    </BotonPagina>
+                )}
+            </NavLink>
 
 
 
-            <Link to="/media-mix-budget" style={{ textDecoration: 'none' }}>
-                <BotonPagina
-                icon="target"
-                isActive={active === "Media Mix & Budget"}
-                onClick={() => setActive("Media Mix & Budget")}>
-                Media Mix & Budget</BotonPagina>
-            </Link>
+            <NavLink 
+                to="/media-mix-budget" 
+                style={{ textDecoration: 'none' }}
+                >
+                {({ isActive }) => (
+                    <BotonPagina icon="target" isActive={isActive}>
+                    Media Mix & Budget
+                    </BotonPagina>
+                )}
+            </NavLink>
 
-            <Link to="/awareness-performance" style={{ textDecoration: 'none' }}>
-                <BotonPagina
-                icon="Language"
-                isActive={active === "Awareness Performance"}
-                onClick={() => setActive("Awareness Performance")}
-                >Awareness Performance
-                </BotonPagina>
-            </Link>
+            <NavLink 
+                to="/awareness-performance" 
+                style={{ textDecoration: 'none' }}
+                >
+                {({ isActive }) => (
+                    <BotonPagina icon="Language" isActive={isActive}>
+                    Awareness Performance
+                    </BotonPagina>
+                )}
+            </NavLink>
 
-            <Link to="/consideration-hub" style={{ textDecoration: 'none' }}>
-               <BotonPagina
-                icon="Group"
-                isActive={active === "Consideration Hub"}
-                onClick={() => setActive("Consideration Hub")}
-                >Consideration Hub
-                </BotonPagina>
-            </Link>
+            <NavLink 
+                to="/consideration-hub" 
+                style={{ textDecoration: 'none' }}
+                >
+                {({ isActive }) => (
+                    <BotonPagina icon="Group" isActive={isActive}>
+                    Consideration Hub
+                    </BotonPagina>
+                )}
+            </NavLink>
 
-            <Link to="/purchase-leads" style={{ textDecoration: 'none' }}>
-               <BotonPagina
-                icon="Shopping_Cart"
-                isActive={active === "Purchase & Leads"}
-                onClick={() => setActive("Purchase & Leads")}
-                >Purchase & Leads
-                </BotonPagina>
-            </Link>
+            <NavLink 
+                to="/purchase-leads" 
+                style={{ textDecoration: 'none' }}
+                >
+                {({ isActive }) => (
+                    <BotonPagina icon="Shopping_Cart" isActive={isActive}>
+                    Purchase & Leads
+                    </BotonPagina>
+                )}
+            </NavLink>
 
-            <Link to="/audience-insights" style={{ textDecoration: 'none' }}>
-                <BotonPagina
-                icon="Group"
-                isActive={active === "Audience Insights"}
-                onClick={() => setActive("Audience Insights")}
-                >Audience Insights
-                </BotonPagina> 
-            </Link>
+            <NavLink 
+                to="/audience-insights" 
+                style={{ textDecoration: 'none' }}
+                >
+                {({ isActive }) => (
+                    <BotonPagina icon="Group" isActive={isActive}>
+                    Audience Insights
+                    </BotonPagina>
+                )}
+            </NavLink>
+
+
             
                 
             </div>
