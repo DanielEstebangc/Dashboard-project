@@ -9,6 +9,6 @@ export default function Awareness_Performance() {
 
   return (
 
-      <SecciondeAnalisis icono="Language" titulo="Awareness Performance" subtitulo="Análisis de alcance, frecuencia y exposición por canal" datos={datosAnalisis} proximamente="Próximamente: Heatmap Reach × Frecuencia, TRP trends, Search Impressions"/>
+      <SecciondeAnalisis icono="Language" titulo="Awareness Performance" subtitulo="Análisis de alcance, frecuencia y exposición por canal" datos={datosAnalisis} proximamente="Próximamente: Heatmap Reach × Frecuencia, TRP trends, Search Impressions" textoclass="text-[rgb(158,45,56)]" extraClass="h-[80.5px] w-[286.885px]"/>
   )
 }
