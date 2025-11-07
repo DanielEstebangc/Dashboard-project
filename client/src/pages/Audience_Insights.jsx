@@ -1,13 +1,14 @@
 
+import SecciondeAnalisis from "../components/pages/SecciondeAnalisis"
 export default function Audience_Insights() {
-  return (
-      <section className="p-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl shadow-lg text-white">
-      <h1 className="text-2xl font-bold drop-shadow-md"> 
-            Audience_Insihts
-        </h1>
-        <p className="text-sm text-gray-900 mb-4">
-            Media
-        </p>
-      </section>
+
+  const datosAnalisis = [
+          { titulodatos: "Clusters Activos", data: "8", comparacion: "Lookalike, In-Market, etc."},
+          { titulodatos: "Overlap Rate", data: "23.4%", comparacion: "Optimizable"},
+          { titulodatos: "Journey Time", data: "18.5d", comparacion: "Awareness → Purchase" },
+        ];
+
+  return (  
+     <SecciondeAnalisis icono="Group" titulo="Audience Insights" subtitulo="Próximamente: Treemap Spend & Leads, Journey Arcs, Geo-map, Keyword Sunburst" datos={datosAnalisis} proximamente="Próximamente: Funnel Visit→Config→Test Drive→Lead, Boxplot CPL, Decomposition Tree" textoclass="text-[rgb(158,45,56)]" style="w-[200px] h-[82px]"/>
   )
 }
