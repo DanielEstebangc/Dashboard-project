@@ -21,8 +21,6 @@ function App() {
           <Route path="/consideration-hub" element={<Consideration_Hub />} />
           <Route path="/purchase-leads" element={<Purchase_Leads />} />
           <Route path="/audience-insights" element={<Audience_Insights />} />
-
-
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,23 +1,50 @@
-import VentasChart from "../components/charts/Char";
-export default function Media_Mix_Budget() {
-  return (
-  < section className="p-6 rounded-2xl shadow-lg text-red-500">
-      <h1 className="text-2xl font-bold drop-shadow-md">          
-        Media_Mix & Budget
-      </h1>
-        <p className="text-sm text-gray-900 mb-4">
-            Media
-        </p>
+import SeccionEvolucion from "../components/pages/MediaMisBudget/SeccionEvolucion"
+export default function Media_Mix_get(){
+  return(
 
+  <div className="w-full flex flex-col">
+
+    <div className="flex items-center justify-between  mb-[21px]">
       <div>
-        <h2>Panel de ventas</h2>
-          <VentasChart />
+        <h2>Media Mix & Budget Analysis</h2>
+        <p className="text-xs text-gray-600 mt-1">Análisis de distribución de inversión y optimización de mix de medios</p>
       </div>
+      <span className="inline-flex items-center justify-center rounded-md border border-[#9E2D38] px-[7px] py-[1.75px] text-[10.5px] leading-[14px] font-medium text-[#9E2D38] w-fit whitespace-nowrap transition-[color,box-shadow] overflow-hidden">
+      Presupuesto Total: $4.63M
+      </span>
+    </div>
 
-    <div className="font-bold text-red p-6 rounded-2xl shadow-lg text-black">
-      prueba melo todo
-      </div>  
-  </section>
-      
+    <SeccionEvolucion/>
+    
+    <div className="grid grid-cols-12 mb-6">
+      <div className="col-span-8">
+        <p>QUI VA LA SECCION CON LA FRAFICA</p>
+      </div>
+      <div className="col-span-4">
+        <p>aqui va la otra seccion</p>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+
   )
 }

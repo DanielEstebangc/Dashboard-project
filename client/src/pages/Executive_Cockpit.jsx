@@ -13,6 +13,7 @@ import CuadroGap from "../components/pages/Executive/cuadroGap/CuadroGap"
 import CuadroRadar from "../components/pages/Executive/CuadroRadar/CuadroRadar"
 {/* importacion tarjeta Alertas */}
 import CuadroAlertas from "../components/pages/Executive/CuadroAlertas/CuadroAlertas"
+
 export default function Executive_Cockpit() {
   return (
 <div className="w-full flex flex-col items-center justify-center p-4 ">
