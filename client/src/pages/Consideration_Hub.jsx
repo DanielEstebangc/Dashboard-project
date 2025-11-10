@@ -9,6 +9,10 @@ export default function Consideration_Hub() {
   ];
 
   return (
-      <SecciondeAnalisis icono="Group" titulo="Consideration Hub" subtitulo="Análisis del micro-funnel: Impressions → Clicks → Sessions" datos={datosAnalisis} proximamente="Próximamente: Cascada Impressions→Clicks→Sessions, Top Landing Pages, Radar Audiencias" textoclass="text-gray-500" extraClass="w-[200px] h-[82px]"/>
+      <SecciondeAnalisis icono="Group" titulo="Consideration Hub" subtitulo="Análisis del micro-funnel: Impressions → Clicks → Sessions" datos={datosAnalisis} proximamente="Próximamente: Cascada Impressions→Clicks→Sessions, Top Landing Pages, Radar Audiencias" textoclass="text-gray-500" extraClass="w-[200px] h-[82px]" estilosiconos={{
+        fontSize: "1.3rem",
+        lineHeight: "1.3rem",
+        color: "rgb(107, 114, 128)"
+      }}/>
   )
 }

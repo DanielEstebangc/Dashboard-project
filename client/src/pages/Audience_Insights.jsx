@@ -9,6 +9,10 @@ export default function Audience_Insights() {
         ];
 
   return (  
-     <SecciondeAnalisis icono="Group" titulo="Audience Insights" subtitulo="Próximamente: Treemap Spend & Leads, Journey Arcs, Geo-map, Keyword Sunburst" datos={datosAnalisis} proximamente="Próximamente: Funnel Visit→Config→Test Drive→Lead, Boxplot CPL, Decomposition Tree" textoclass="text-[rgb(158,45,56)]" extraClass="h-[80.5px] w-[286.885px]"/>
+     <SecciondeAnalisis icono="Group" titulo="Audience Insights" subtitulo="Análisis de clusters, journey y solapamiento de audiencias" datos={datosAnalisis} proximamente="Próximamente: Treemap Spend & Leads, Journey Arcs, Geo-map, Keyword Sunburst" textoclass="text-[rgb(158,45,56)]" extraClass="h-[80.5px] w-[286.885px]" estilosiconos={{
+        fontSize: "1.3rem",
+        lineHeight: "1.3rem",
+        color: "rgb(158, 45, 56)"
+      }}/>
   )
 }

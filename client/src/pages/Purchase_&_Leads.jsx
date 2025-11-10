@@ -9,6 +9,10 @@ export default function Consideration_Hub() {
   ];
 
   return (
-      <SecciondeAnalisis icono="Group" titulo="Purchase & Leads" subtitulo="Funnel de conversión: Visit → Config → Test Drive → Lead" datos={datosAnalisis} proximamente="Próximamente: Funnel Visit→Config→Test Drive→Lead, Boxplot CPL, Decomposition Tree" textoclass="text-[#2B5A7A]" extraClass="w-[200px] h-[82px]"/>
+      <SecciondeAnalisis icono="finance" titulo="Purchase & Leads" subtitulo="Funnel de conversión: Visit → Config → Test Drive → Lead" datos={datosAnalisis} proximamente="Próximamente: Funnel Visit→Config→Test Drive→Lead, Boxplot CPL, Decomposition Tree" textoclass="text-[#2B5A7A]" extraClass="w-[200px] h-[82px]"estilosiconos={{
+        fontSize: "1.3rem",
+        lineHeight: "1.3rem",
+        color: "#2B5A7A"
+      }}/>
   )
 }

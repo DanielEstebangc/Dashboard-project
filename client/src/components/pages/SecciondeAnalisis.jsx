@@ -1,16 +1,12 @@
 import SeccionDatos from "./SeccionDatos"
-export default function SecciondeAnalisis({icono,titulo,subtitulo,datos,proximamente,textoclass,extraClass}){
+export default function SecciondeAnalisis({icono,titulo,subtitulo,datos,proximamente,textoclass,extraClass,estilosiconos}){
     return(
     <div className="bg-white border-[2px] hover:border-[rgb(158,45,56)] rounded-[8px] shadow-[0_4px_12px_rgba(0,0,0,0.15)] box-border font-sans text-[14px] leading-[21px] flex flex-col gap-[21px] w-[934.667px] h-[222.833px] text-left transition-all duration-200 ease-in-out">
         <div className="grid items-start box-border font-sans text-[14px] leading-[21px] gap-x-[5.25px] gap-y-[5.25px] grid-rows-[17.5px_17.5px] h-[61.25px] w-[930.667px] px-[21px] py-[21px] text-left">
             <h4 className="text-black flex items-center box-border font-sans text-[14px] leading-[14px] font-normal h-[17.5px] w-[888.667px] text-left">
             <span
                 className="material-symbols-outlined me-2"
-                style={{
-                    fontSize: "1.3rem",
-                    lineHeight: "1.3rem",
-                    color: "rgb(158, 45, 56)"
-                }}>
+                style={estilosiconos}>
                  {icono}
                 </span>
             {titulo}
