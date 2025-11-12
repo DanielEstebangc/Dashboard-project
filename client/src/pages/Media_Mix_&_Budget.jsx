@@ -1,4 +1,6 @@
 import SeccionEvolucion from "../components/pages/MediaMisBudget/SeccionEvolucion"
+import SeccionEficiencia from "../components/pages/MediaMisBudget/SeccionEficiencia/SeccionEficiencia"
+import SeccionPresupuesto from "../components/pages/MediaMisBudget/SeccionPresupuesto/SeccionPresupuesto"
 export default function Media_Mix_get(){
   return(
 
@@ -16,12 +18,12 @@ export default function Media_Mix_get(){
 
     <SeccionEvolucion/>
     
-    <div className="grid grid-cols-12 mb-6">
+    <div className="grid grid-cols-12 mb-6 gap-6">
       <div className="col-span-8">
-        <p>QUI VA LA SECCION CON LA FRAFICA</p>
+        <SeccionEficiencia/>
       </div>
       <div className="col-span-4">
-        <p>aqui va la otra seccion</p>
+        <SeccionPresupuesto/>
       </div>
     </div>
   
