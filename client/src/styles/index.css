@@ -26,4 +26,14 @@ html, body {
   border: none !important;
 }
 
+/* 👇 Aquí defines tus clases reutilizables */
+@layer components {
+  .card-base {
+    @apply hover:border-[rgb(158,45,56)] 
+           shadow-[0_0_4px_rgba(0,0,0,0.1)] 
+           flex flex-col gap-6 
+           rounded-xl border-2 mb-[21px];
+  }
+}
+
 
