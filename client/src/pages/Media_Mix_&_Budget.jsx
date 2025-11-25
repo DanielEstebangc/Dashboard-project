@@ -1,6 +1,7 @@
 import SeccionEvolucion from "../components/pages/MediaMisBudget/SeccionEvolucion"
 import SeccionEficiencia from "../components/pages/MediaMisBudget/SeccionEficiencia/SeccionEficiencia"
 import SeccionPresupuesto from "../components/pages/MediaMisBudget/SeccionPresupuesto/SeccionPresupuesto"
+import SeccionSeo from "../components/pages/MediaMisBudget/SeccioSeoperformance/SeccionSeo"
 export default function Media_Mix_get(){
   return(
 
@@ -26,26 +27,15 @@ export default function Media_Mix_get(){
         <SeccionPresupuesto/>
       </div>
     </div>
+    
+
+    <SeccionSeo/>
+
+    
+    
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
   </div>
 
   )
