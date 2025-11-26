@@ -1,12 +1,13 @@
-import express from 'express';
+import express from "express";
+import cors from "cors";
+import chartRoutes from "./src/routes/chart.routes.js";
 
 const app = express();
+app.use(cors());
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Servidor funcionando con Express 🚀');
-});
+// Rutas
+app.use("/api/chart", chartRoutes);
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log("Server running on port", PORT));
