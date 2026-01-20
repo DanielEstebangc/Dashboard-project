@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getFunnelData } from "../../../../services/funnelService"; // ✅ USO DEL SERVICE
 import { useFunnelData } from "../../../../hooks/useFunnelData"; // ✅ IMPORT DEL HOOK
+import { useFilteredFunnel } from "../../../../hooks/useFilteredFunnel";
+
 
 import {
   FunnelChart,
@@ -12,6 +14,10 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+const filters = {
+  year_month: "2024-05",
+};
+
 // 🎨 Colores fijos
 const COLORS = ["#9E2D38", "#666666", "#2B5A7A"];
 
@@ -21,6 +27,8 @@ const LINKS = [
   "/consideration-hub",
   "/purchase-leads",
 ];
+
+
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -39,7 +47,11 @@ const CustomTooltip = ({ active, payload }) => {
 
 const CustomFunnelChart = () => {
   const navigate = useNavigate();
-  const { data, loading, error } = useFunnelData();
+  //const { data, loading, error } = useFunnelData();
+  const { data, loading, error } = useFilteredFunnel(filters);
+
+  console.log("DATA CHART:", data);
+
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error cargando funnel</p>;

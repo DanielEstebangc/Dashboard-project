@@ -11,8 +11,8 @@ export async function getFunnelData() {
   const json = JSON.parse(text.match(/.*?({.*}).*/s)[1]);
 
   const rows = json.table.rows.map(row => ({
-    name: row.c[1]?.v,       // funnel_stage
-    value: row.c[4]?.v       // leads (o la métrica que quieras mostrar)
+    name: row.c[0]?.v,       // funnel_stage
+    value: row.c[1]?.v       // leads (o la métrica que quieras mostrar)
   }));
 
   return rows;
