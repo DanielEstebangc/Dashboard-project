@@ -1,9 +1,20 @@
 export async function getFunnelData() {
-  const response = await fetch("http://localhost:4000/api/chart/funnel");
+  const SHEET_ID = "1-cqN8Hftzzen7DrRHWJfWV757IWuJFZZtQAFQxsXcBE";
+  const SHEET_NAME = "vw_funnel_performance_final"; // hoja donde están tus queries finales
 
-  if (!response.ok) {
-    throw new Error("Error al obtener funnel data");
-  }
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
 
-  return await response.json(); // ← esto devuelve el array del backend
+  const res = await fetch(url);
+  const text = await res.text();
+
+  // Google Sheets devuelve JSONP, hay que extraer el JSON
+  const json = JSON.parse(text.match(/.*?({.*}).*/s)[1]);
+
+  const rows = json.table.rows.map(row => ({
+    name: row.c[1]?.v,       // funnel_stage
+    value: row.c[4]?.v       // leads (o la métrica que quieras mostrar)
+  }));
+
+  return rows;
 }
+

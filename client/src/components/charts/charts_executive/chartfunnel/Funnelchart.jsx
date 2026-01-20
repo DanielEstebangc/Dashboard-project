@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getFunnelData } from "../../../../services/funnelService"; // ✅ USO DEL SERVICE
+import { useFunnelData } from "../../../../hooks/useFunnelData"; // ✅ IMPORT DEL HOOK
 
 import {
   FunnelChart,
@@ -38,24 +39,10 @@ const CustomTooltip = ({ active, payload }) => {
 
 const CustomFunnelChart = () => {
   const navigate = useNavigate();
-  const [data, setData] = useState(null);
+  const { data, loading, error } = useFunnelData();
 
-  useEffect(() => {
-    getFunnelData()               // ✅ Ahora usamos el service
-      .then((apiData) => {
-        const finalData = apiData.map((item, index) => ({
-          ...item,
-          fill: COLORS[index],
-          link: LINKS[index],
-        }));
-        setData(finalData);
-      })
-      .catch((error) => {
-        console.error("Error cargando funnel:", error);
-      });
-  }, []);
-
-  if (!data) return <p>Cargando...</p>;
+  if (loading) return <p>Cargando...</p>;
+  if (error) return <p>Error cargando funnel</p>;
 
   return (
     <div className="chart-no-outline flex flex-col justify-center items-center block box-border w-[373.406px] h-[300px]">
