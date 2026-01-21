@@ -1,10 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { getFunnelData } from "../../../../services/funnelService"; // ✅ USO DEL SERVICE
-import { useFunnelData } from "../../../../hooks/useFunnelData"; // ✅ IMPORT DEL HOOK
-import { useFilteredFunnel } from "../../../../hooks/useFilteredFunnel";
-
-
 import {
   FunnelChart,
   Funnel,
@@ -14,27 +8,15 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const filters = {
-  year_month: "2024-05",
-};
-
-// 🎨 Colores fijos
+// Colores fijos
 const COLORS = ["#9E2D38", "#666666", "#2B5A7A"];
-
-// 🔗 Links fijos
-const LINKS = [
-  "/awareness-performance",
-  "/consideration-hub",
-  "/purchase-leads",
-];
-
-
+// Links fijos
+const LINKS = ["/awareness-performance", "/consideration-hub", "/purchase-leads"];
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const { name, value } = payload[0].payload;
     const formattedValue = `$${value.toLocaleString("en-US")}`;
-
     return (
       <div className="bg-white border border-gray-300 px-3 py-2 rounded-lg shadow-md text-sm flex justify-between items-center gap-2">
         <p className="m-0 text-gray-700 font-medium">{name}</p>
@@ -45,19 +27,15 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-const CustomFunnelChart = () => {
+export default function FunnelChartComponent({ data, loading, error }) {
   const navigate = useNavigate();
-  //const { data, loading, error } = useFunnelData();
-  const { data, loading, error } = useFilteredFunnel(filters);
-
-  console.log("DATA CHART:", data);
-
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error cargando funnel</p>;
+  if (!data || data.length === 0) return <p>No hay datos</p>;
 
   return (
-    <div className="chart-no-outline flex flex-col justify-center items-center block box-border w-[373.406px] h-[300px]">
+    <div className="chart-no-outline flex flex-col justify-center items-center w-[373px] h-[300px]">
       <div className="w-[330px] h-[300px] p-4">
         <ResponsiveContainer width="100%" height="100%">
           <FunnelChart>
@@ -78,6 +56,4 @@ const CustomFunnelChart = () => {
       </div>
     </div>
   );
-};
-
-export default CustomFunnelChart;
+}

@@ -26,15 +26,15 @@ export const useFilteredFunnel = (filters = {}) => {
 
     getFunnelGrain()
       .then(rows => {
-            console.log("ROWS RAW:", rows);
-            console.log("FILTERS:", filters);
-            console.log("YEAR_MONTH ROWS:", rows.map(r => r.year_month));
+           // console.log("ROWS RAW:", rows);
+            //console.log("FILTERS:", filters);
+           // console.log("YEAR_MONTH ROWS:", rows.map(r => r.year_month));
         // 1️⃣ Filtrar (si no hay filtros, pasa todo)
         const filtered = rows.filter(r =>
-          (!filters.year_month || r.year_month === filters.year_month) &&
-          (!filters.channel || r.channel === filters.channel) &&
-          (!filters.region || r.region === filters.region) &&
-          (!filters.vehicle_model || r.vehicle_model === filters.vehicle_model)
+          //(!filters.year_month || r.year_month === filters.year_month) &&
+          (!filters.channel || r.channel === filters.channel) //&&
+          //(!filters.region || r.region === filters.region) &&
+          //(!filters.vehicle_model || r.vehicle_model === filters.vehicle_model)
         );
 
         // 2️⃣ Agrupar por funnel_stage
@@ -60,11 +60,13 @@ export const useFilteredFunnel = (filters = {}) => {
           })
         );
 
+       // console.log("FILTRADO POR CANAL:", filtered.map(r => `${r.year_month} ${r.funnel_stage} ${r.channel} ${r.cost}`));
+
         finalData.sort(
             (a, b) => ORDER.indexOf(a.name) - ORDER.indexOf(b.name)
         );
 
-        console.log("FUNNEL FINAL:", finalData);
+        //console.log("FUNNEL FINAL:", finalData);
 
         setData(finalData);
         setLoading(false);

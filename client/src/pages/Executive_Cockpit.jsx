@@ -13,8 +13,20 @@ import CuadroGap from "../components/pages/Executive/cuadroGap/CuadroGap"
 import CuadroRadar from "../components/pages/Executive/CuadroRadar/CuadroRadar"
 {/* importacion tarjeta Alertas */}
 import CuadroAlertas from "../components/pages/Executive/CuadroAlertas/CuadroAlertas"
+import { useOutletContext } from "react-router-dom";
+import { useFilteredFunnel } from "../hooks/useFilteredFunnel";
+
 
 export default function Executive_Cockpit() {
+
+  const { filters } = useOutletContext(); // obtiene filtros desde Layout
+
+  const { data, loading, error } = useFilteredFunnel(filters);
+
+  // 👇 DEBUG (solo mientras pruebas)
+  //console.log("FILTERS:", filters);
+  //console.log("FUNNEL DATA:", data);
+  
   return (
 <div className="w-full flex flex-col items-center justify-center p-4 ">
   <div className="grid box-border text-[oklch(0.145_0_0)] font-sans text-[14px] leading-[21px] text-left gap-x-[14px] gap-y-[14px] m-0 mb-[21px] w-full max-w-[900px] border-[0px] border-solid border-[rgba(0,0,0,0.1)] outline-[oklab(0.708_0_0_/_0.5)] grid-cols-5 [--webkit-tap-highlight-color:rgba(0,0,0,0)]">
@@ -34,7 +46,9 @@ export default function Executive_Cockpit() {
             <FunnelTitulo/>
             <div className="bg-white flex flex-col justify-center items-center w-full h-auto px-[21px] py-[21px] border-[rgba(112, 103, 103, 0.8)]">
                 <div className="flex flex-col justify-center items-center w-full h-auto border-[rgba(112, 103, 103, 0.8)]">
-                  <FunnelChart/>
+                  {loading && <p>Cargando...</p>}
+                  {error && <p>Error cargando funnel</p>}
+                  {!loading && !error && <FunnelChart data={data} />}
                 </div>
                 <div className=" bg-white grid grid-cols-3 gap-[14px] w-full h-auto mt-[14px] text-[14px] leading-[21px] text-left text-[oklch(0.145_0_0)] font-sans border-0 p-0 m-0">
                   <EtapasCuadro className=" text-[#9E2D38]" titulo="Awareness" leads={1200} valor={2300} />
