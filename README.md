@@ -75,3 +75,6 @@ El orden de los datos no afecta la visualización, pero sí la configuración de
 
 <img width="1886" height="387" alt="image" src="https://github.com/user-attachments/assets/8402defe-ebe9-45b9-a5f6-36a8c80de5a1" />
 
+<img width="323" height="342" alt="image" src="https://github.com/user-attachments/assets/02fa4ce7-1b98-41a5-930e-e4758e5bb918" />
+
+
