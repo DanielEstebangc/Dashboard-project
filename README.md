@@ -55,11 +55,7 @@ cost
 
 ## 🛠️Hook principal
 
-El hook useFilteredFunnel:
-Consume los datos desde Google Sheets
-Aplica filtros dinámicos
-Agrupa por funnel_stage
-Devuelve la data lista para visualización
+El hook useFilteredFunnel:Consume los datos desde Google Sheets Aplica filtros dinámicos Agrupa por funnel_stage Devuelve la data lista para visualización
 
 ## ▶️Cómo correr el proyecto
 npm install
