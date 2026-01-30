@@ -36,21 +36,6 @@ State management: React hooks
 
 Charts: Recharts
 
-## 📂 Estructura relevante
-
-  src/
-  |
-  ├── hooks/
-  |   |
-  │   └── useFilteredFunnel.js
-  ├── services/
-  |   |
-  │   └── funnelGrainService.js
-  |
-  ├── components/
-  |   |
-  │   └── FunnelChart.jsx
-
 ## 🔌Fuente de datos
 Los datos provienen de una vista en Google Sheets (vw_funnel_grain) construida mediante QUERY() sobre una tabla fact (fact_leads), exponiendo únicamente las columnas necesarias para el funnel:
 
