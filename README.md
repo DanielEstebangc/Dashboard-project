@@ -9,12 +9,19 @@ El objetivo del proyecto es ofrecer una vista clara y rápida del desempeño de 
 🎯 Filtros dinámicos por:
 
 Canal
+
 Región
+
 Modelo de vehículo
+
 Fecha (year_month)
+
 🔄 Datos consumidos en tiempo real desde Google Sheets (GViz API)
+
 🧮 Agregación automática de costos por funnel_stage
+
 🎨 Colores y orden consistentes por etapa del funnel
+
 ⚡ Arquitectura basada en hooks reutilizables
 
 ## 🧠 Arquitectura
