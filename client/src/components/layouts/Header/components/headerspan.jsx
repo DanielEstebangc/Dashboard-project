@@ -10,7 +10,7 @@ export default function Headerspan( ) {
     transition-[color,box-shadow] overflow-hidden
   "
   >
-  Dentsu Analytics
+   Analytics
 </span>
   );
 }
