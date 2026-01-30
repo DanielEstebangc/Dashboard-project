@@ -61,6 +61,7 @@ El hook useFilteredFunnel: Consume los datos desde Google Sheets Aplica filtros 
 
 ## ▶️Cómo correr el proyecto
 npm install
+
 npm run dev
 
 ## 📌Notas importantes
