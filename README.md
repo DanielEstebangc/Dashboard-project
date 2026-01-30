@@ -73,3 +73,6 @@ El orden de los datos no afecta la visualización, pero sí la configuración de
 ## Imagenes
 
 <img width="1770" height="982" alt="image" src="https://github.com/user-attachments/assets/acb52758-dfa0-473d-8d03-5c29327868e5" />
+
+![Uploading image.png…]()
+
