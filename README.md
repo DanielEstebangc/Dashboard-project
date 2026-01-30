@@ -5,7 +5,9 @@ El objetivo del proyecto es ofrecer una vista clara y rápida del desempeño de 
 
 ## 🚀Features
 📈 Visualización de funnel de marketing por etapa
+
 🎯 Filtros dinámicos por:
+
 Canal
 Región
 Modelo de vehículo
