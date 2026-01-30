@@ -10,6 +10,8 @@ El objetivo del proyecto es ofrecer una vista clara y rápida del desempeño de 
 
 Canal
 
+proximamente por:
+
 Región
 
 Modelo de vehículo
