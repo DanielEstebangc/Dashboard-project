@@ -71,7 +71,7 @@ El parámetro headers en la función QUERY() debe coincidir con la fila real de 
 El orden de los datos no afecta la visualización, pero sí la configuración de la vista.
 
 ## Imagenes
-<img width="1127" height="943" alt="image" src="https://github.com/user-attachments/assets/39f9cf8f-5e9f-4408-ba08-931eed2a54cf" />
+<img width="1207" height="948" alt="image" src="https://github.com/user-attachments/assets/13e9641f-f8c9-41c1-8249-9d1e15b787b3" />
 
 <img width="1886" height="387" alt="image" src="https://github.com/user-attachments/assets/8402defe-ebe9-45b9-a5f6-36a8c80de5a1" />
 
